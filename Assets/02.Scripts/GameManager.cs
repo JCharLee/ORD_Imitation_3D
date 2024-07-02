@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,8 +18,9 @@ public class GameManager : MonoBehaviour
     public int kill;
     public int enemyCount;
 
-    public Transform unitStage;
-    public Vector3[] unitZones;
+    [Header("# Stage Info")]
+    public Transform[] unitZones;
+    public UnitData[] unitDatas;
 
     public PoolManager pool;
 
@@ -35,8 +37,27 @@ public class GameManager : MonoBehaviour
 
     public void DrawUnit()
     {
-        drawNums--;
-        pool.GetPool(Random.Range(0, 4), unitStage);
+        for (int i = 0; i < unitZones.Length; i++)
+        {
+            int ran = Random.Range(0, 4);
+
+            GameObject unit = null;
+            for (int j = 0; j < unitZones[i].childCount; j++)
+            {
+                GameObject obj = unitZones[i].GetChild(j).gameObject;
+                if (obj.activeSelf)
+                {
+                    unit = obj;
+                    break;
+                }
+            }
+
+            if (!unit)
+            {
+                pool.GetPool(ran, unitZones[i]);
+                break;
+            }
+        }
     }
 
     public void DrawGold()

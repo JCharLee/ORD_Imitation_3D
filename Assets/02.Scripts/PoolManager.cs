@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,23 @@ public class PoolManager : MonoBehaviour
                 obj = pool;
                 obj.SetActive(true);
                 break;
+            }
+            else
+            {
+                GameObject[] objUnits = new GameObject[pool.transform.childCount];
+                for (int i = 0; i < objUnits.Length; i++)
+                {
+                    objUnits[i] = pool.transform.GetChild(i).gameObject;
+                }
+                foreach (GameObject unit in objUnits)
+                {
+                    if (!unit.activeSelf)
+                    {
+                        obj = unit;
+                        obj.SetActive(true);
+                        break;
+                    }
+                }
             }
         }
 
