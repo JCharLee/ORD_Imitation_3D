@@ -30,23 +30,6 @@ public class PoolManager : MonoBehaviour
                 obj.SetActive(true);
                 break;
             }
-            else
-            {
-                GameObject[] objUnits = new GameObject[pool.transform.childCount];
-                for (int i = 0; i < objUnits.Length; i++)
-                {
-                    objUnits[i] = pool.transform.GetChild(i).gameObject;
-                }
-                foreach (GameObject unit in objUnits)
-                {
-                    if (!unit.activeSelf)
-                    {
-                        obj = unit;
-                        obj.SetActive(true);
-                        break;
-                    }
-                }
-            }
         }
 
         if (!obj)

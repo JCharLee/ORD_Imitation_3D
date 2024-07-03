@@ -201,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ticketType: 0
   drawNums: 5
-  gold: 100
+  gold: 10
   kill: 0
   enemyCount: 0
   unitZones:

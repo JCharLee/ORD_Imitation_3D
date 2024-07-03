@@ -37,22 +37,17 @@ public class GameManager : MonoBehaviour
 
     public void DrawUnit()
     {
+        drawNums--;
+
+        int ran = Random.Range(0, 4);
+
         for (int i = 0; i < unitZones.Length; i++)
         {
-            int ran = Random.Range(0, 4);
-
-            GameObject unit = null;
-            for (int j = 0; j < unitZones[i].childCount; j++)
+            if (unitZones[i].childCount != 0)
             {
-                GameObject obj = unitZones[i].GetChild(j).gameObject;
-                if (obj.activeSelf)
-                {
-                    unit = obj;
-                    break;
-                }
+                
             }
-
-            if (!unit)
+            else
             {
                 pool.GetPool(ran, unitZones[i]);
                 break;
@@ -83,4 +78,5 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
 }
