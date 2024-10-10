@@ -5,9 +5,9 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     public UnitData data;
-    GameObject[] units;
+    public GameObject[] units;
 
-    private void Awake()
+    void Awake()
     {
         units = new GameObject[5];
         for (int i = 0; i < units.Length; i++)
@@ -16,7 +16,29 @@ public class Unit : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    public void UnitActive()
+    {
+        for (int i = 0; i < units.Length; i++)
+        {
+            if (!units[i].activeSelf)
+            {
+                units[i].SetActive(true);
+                break;
+            }
+        }
+    }
+
+    public bool FullUnit()
+    {
+        for (int i = 0; i < units.Length; i++)
+        {
+            if (!units[i].activeSelf)
+                return false;
+        }
+        return true;
+    }
+
+    void OnMouseDown()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;

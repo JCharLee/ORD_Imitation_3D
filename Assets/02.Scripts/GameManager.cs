@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     [Header("# Stage Info")]
     public Transform[] unitZones;
-    public UnitData[] unitDatas;
+    Dictionary<Transform, List<int>> zoneUnits;
 
     public PoolManager pool;
 
@@ -28,10 +28,16 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         ticketNums = new Dictionary<SelectTicketType, int>();
+        zoneUnits = new Dictionary<Transform, List<int>>();
 
         foreach (SelectTicketType type in ticketNums.Keys)
         {
             ticketNums[type] = 0;
+        }
+
+        for (int i = 0; i < unitZones.Length; i++)
+        {
+            zoneUnits.Add(unitZones[i], new List<int>());
         }
     }
 
@@ -45,7 +51,20 @@ public class GameManager : MonoBehaviour
         {
             if (unitZones[i].childCount != 0)
             {
-                
+                if (ActiveCheck(unitZones[i]))
+                {
+                    int id = GetUnitID(GetActiveUnit(unitZones[i]));
+
+                    if (ran == id)
+                    {
+                        Unit unit = GetActiveUnit(unitZones[i]).GetComponent<Unit>();
+                        if (!unit.FullUnit())
+                        {
+                            unit.UnitActive();
+                            break;
+                        }
+                    }
+                }
             }
             else
             {
@@ -53,6 +72,59 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    bool ActiveCheck(Transform obj)
+    {
+        bool active = false;
+        GameObject[] units = GetChildrenObjs(obj);
+
+        for (int i = 0; i < units.Length; i++)
+        {
+            if (units[i].activeSelf)
+            {
+                active = true;
+                break;
+            }
+        }
+
+        return active;
+    }
+
+    GameObject GetActiveUnit(Transform obj)
+    {
+        GameObject unit = null;
+        GameObject[] units = GetChildrenObjs(obj);
+
+        for (int i = 0; i < units.Length; i++)
+        {
+            if (units[i].activeSelf)
+            {
+                unit = units[i];
+                break;
+            }
+        }
+
+        return unit;
+    }
+
+    GameObject[] GetChildrenObjs(Transform obj)
+    {
+        GameObject[] units = new GameObject[obj.childCount];
+
+        for (int i = 0; i < units.Length; i++)
+        {
+            units[i] = obj.GetChild(i).gameObject;
+        }
+
+        return units;
+    }
+
+    int GetUnitID(GameObject unit)
+    {
+        int id = unit.GetComponent<Unit>().data.unitId;
+
+        return id;
     }
 
     public void DrawGold()
@@ -78,5 +150,4 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-
 }

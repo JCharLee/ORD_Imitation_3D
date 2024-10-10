@@ -12,7 +12,6 @@ public class UnitData : ScriptableObject
     public string unitName;
     [TextArea]
     public string unitDesc;
-    public GameObject unitPrefab;
 
     public float damage;
     public float atkSpeed;
