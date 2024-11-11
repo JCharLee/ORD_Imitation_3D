@@ -5,12 +5,14 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public EnemyData data;
+    public float hp;
+    public float def;
+
     public Transform[] point;
 
     int pointIdx;
-    float hp;
-    float def;
+
+    // ÄÄÆ÷³ÍÆ®
     NavMeshAgent agent;
 
     void Awake()
@@ -20,8 +22,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        hp = data.hp;
-        def = data.def;
+        
     }
 
     void OnEnable()
