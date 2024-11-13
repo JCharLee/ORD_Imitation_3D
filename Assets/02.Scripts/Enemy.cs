@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float hp;
-    public float def;
+    public float maxHp;
 
     public Transform[] point;
 
@@ -29,6 +29,11 @@ public class Enemy : MonoBehaviour
     {
         pointIdx = 0;
         transform.position = point[pointIdx].position;
+    }
+
+    public void Init()
+    {
+
     }
 
     void MoveNextPoint()

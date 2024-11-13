@@ -28,8 +28,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI levelTxt;
     public TextMeshProUGUI timeTxt;
     public TextMeshProUGUI enemyNum;
-    public int level;
-    public float remainTime = 40f;
+    public int level = 1;
+    public float levelTime = 41f;
+    public float remainTime;
+    public bool gameStart = false;
 
     public PoolManager pool;
 
@@ -50,45 +52,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        StartCoroutine(Ready());
+    }
+
     void Update()
     {
         remainTime -= Time.deltaTime;
         int min = Mathf.FloorToInt(remainTime / 60);
         int sec = Mathf.FloorToInt(remainTime % 60);
         timeTxt.text = string.Format("{0:D2} : {1:D2}", min, sec);
+        levelTxt.text = string.Format("·¹º§ {0:D2}", level);
+
+        if (remainTime < 0.01f)
+        {
+            level++;
+            remainTime = levelTime;
+        }
+    }
+
+    IEnumerator Ready()
+    {
+        remainTime = 6f;
+        level = 0;
+        yield return new WaitForSeconds(remainTime);
+        remainTime = levelTime;
+        gameStart = true;
     }
 
     public void DrawUnit()
     {
-        drawNums--;
-
-        int ran = Random.Range(0, 4);
-
-        for (int i = 0; i < unitZones.Length; i++)
-        {
-            if (unitZones[i].childCount != 0)
-            {
-                if (ActiveCheck(unitZones[i]))
-                {
-                    int id = GetUnitID(GetActiveUnit(unitZones[i]));
-
-                    if (ran == id)
-                    {
-                        Unit unit = GetActiveUnit(unitZones[i]).GetComponent<Unit>();
-                        if (!unit.FullUnit())
-                        {
-                            unit.UnitActive();
-                            break;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                pool.GetPool(ran, unitZones[i]);
-                break;
-            }
-        }
+        
     }
 
     bool ActiveCheck(Transform obj)
