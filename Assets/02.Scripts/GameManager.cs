@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +24,13 @@ public class GameManager : MonoBehaviour
     public Transform[] unitZones;
     Dictionary<Transform, List<int>> zoneUnits;
 
+    [Header("# Game Info")]
+    public TextMeshProUGUI levelTxt;
+    public TextMeshProUGUI timeTxt;
+    public TextMeshProUGUI enemyNum;
+    public int level;
+    public float remainTime = 40f;
+
     public PoolManager pool;
 
     void Awake()
@@ -39,6 +48,14 @@ public class GameManager : MonoBehaviour
         {
             zoneUnits.Add(unitZones[i], new List<int>());
         }
+    }
+
+    void Update()
+    {
+        remainTime -= Time.deltaTime;
+        int min = Mathf.FloorToInt(remainTime / 60);
+        int sec = Mathf.FloorToInt(remainTime % 60);
+        timeTxt.text = string.Format("{0:D2} : {1:D2}", min, sec);
     }
 
     public void DrawUnit()

@@ -229,6 +229,11 @@ MonoBehaviour:
   - {fileID: 161333374}
   - {fileID: 534879181}
   - {fileID: 1873117919}
+  levelTxt: {fileID: 1883276780}
+  timeTxt: {fileID: 272169569}
+  enemyNum: {fileID: 1920097625}
+  level: 0
+  remainTime: 40
   pool: {fileID: 93029192}
 --- !u!114 &93029192
 MonoBehaviour:
@@ -2174,8 +2179,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099694420}
+  - component: {fileID: 1099694421}
   m_Layer: 0
-  m_Name: Point_0
+  m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2197,6 +2203,19 @@ Transform:
   - {fileID: 1639818170}
   m_Father: {fileID: 845230843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099694421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099694419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc13e4c676552140a021529379f4e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 0}
 --- !u!1 &1158471067
 GameObject:
   m_ObjectHideFlags: 0
@@ -33536,6 +33555,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930647936}
     m_Modifications:
+    - target: {fileID: -3279386706538419876, guid: 73a770c3a5d443048b4b389fed242636,
+        type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 6438281766510577465, guid: 73a770c3a5d443048b4b389fed242636,
         type: 3}
       propertyPath: m_Name
