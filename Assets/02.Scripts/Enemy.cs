@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     public float hp;
     public float maxHp;
+    public float def;
+    public bool isDie;
 
     public Transform[] point;
 
@@ -20,15 +22,15 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    void Start()
-    {
-        
-    }
-
     void OnEnable()
     {
-        pointIdx = 0;
-        transform.position = point[pointIdx].position;
+        for (int i = 0; i < point.Length; i++)
+        {
+            point[i] = GameObject.Find("PatrolPoint").transform.GetChild(i).transform;
+        }
+
+        isDie = false;
+        hp = maxHp;
     }
 
     public void Init()
@@ -51,6 +53,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (isDie) return;
+
         if (!agent.isStopped)
         {
             Quaternion rot = Quaternion.LookRotation(agent.desiredVelocity);
@@ -59,5 +63,11 @@ public class Enemy : MonoBehaviour
 
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             MoveNextPoint();
+    }
+
+    public void Dead()
+    {
+        isDie = true;
+        agent.isStopped = true;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform spawnPoint;
+    public Transform enemyList;
     public float spawnTime = 1f;
     public float timer;
     public int enemyCount = 20;
@@ -12,27 +12,35 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        timer = 1f;
         level = 0;
     }
 
     void Update()
     {
+        if (!GameManager.instance.gameStart) return;
+
         timer += Time.deltaTime;
 
         if (level != GameManager.instance.level)
         {
             level++;
-            if (timer > spawnTime && enemyCount != 0)
-            {
-                timer = 0;
-                enemyCount--;
-                Spawn();
-            }
+            enemyCount = 20;
+        }
+
+        if (timer > spawnTime && enemyCount != 0)
+        {
+            timer = 0;
+            enemyCount--;
+            Spawn();
+            GameManager.instance.enemyCount++;
         }
     }
 
     void Spawn()
     {
-        GameManager.instance.pool.GetPool(0, spawnPoint);
+        GameObject enemy = GameManager.instance.pool.GetPool(0, enemyList);
+        enemy.transform.position = transform.position;
+        enemy.GetComponent<Enemy>().Init();
     }
 }

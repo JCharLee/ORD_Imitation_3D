@@ -1547,7 +1547,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 845230843}
-  - component: {fileID: 845230844}
   m_Layer: 0
   m_Name: PatrolPoint
   m_TagString: Untagged
@@ -1574,23 +1573,6 @@ Transform:
   - {fileID: 182002227}
   m_Father: {fileID: 1939949890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &845230844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845230842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc13e4c676552140a021529379f4e72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1099694420}
-  spawnTime: 1
-  timer: 0
-  enemyCount: 20
-  level: 0
 --- !u!1 &847483139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2156,6 +2138,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 822735781}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1024931755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024931756}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1024931756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024931755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040537678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,9 +2245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc13e4c676552140a021529379f4e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  spawnTime: 0
-  timer: 0
+  enemyList: {fileID: 1024931756}
+  spawnTime: 0.5
+  timer: 1
   enemyCount: 20
   level: 0
 --- !u!1 &1158471067
@@ -33463,3 +33476,4 @@ SceneRoots:
   - {fileID: 543450653697883772}
   - {fileID: 1939949890}
   - {fileID: 93029190}
+  - {fileID: 1024931756}

@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         int sec = Mathf.FloorToInt(remainTime % 60);
         timeTxt.text = string.Format("{0:D2} : {1:D2}", min, sec);
         levelTxt.text = string.Format("·¹º§ {0:D2}", level);
+        enemyNum.text = string.Format("{0:D2}", enemyCount);
 
         if (remainTime < 0.01f)
         {
