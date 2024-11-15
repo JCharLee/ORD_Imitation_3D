@@ -6,8 +6,10 @@ using UnityEngine;
 public class UnitData : ScriptableObject
 {
     public enum UnitClass { Normal, Rare, Epic, Legendary }
+    public enum UnitType { Melee, Range }
 
     public UnitClass unitClass;
+    public UnitType unitType;
     public int unitId;
     public string unitName;
     [TextArea]
@@ -15,5 +17,4 @@ public class UnitData : ScriptableObject
 
     public float damage;
     public float atkSpeed;
-    public float atkRange;
 }

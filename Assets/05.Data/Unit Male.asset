@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Unit Male
   m_EditorClassIdentifier: 
   unitClass: 0
+  unitType: 0
   unitId: 0
   unitName: Male
   unitDesc: Basic Male
   damage: 10
-  atkSpeed: 10
-  atkRange: 5
+  atkSpeed: 1

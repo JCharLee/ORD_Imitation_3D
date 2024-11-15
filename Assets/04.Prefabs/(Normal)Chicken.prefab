@@ -2791,6 +2791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4273967217803733079}
   - component: {fileID: 2084969400374351117}
+  - component: {fileID: 2454267483163297787}
   m_Layer: 0
   m_Name: Chicken_4
   m_TagString: Untagged
@@ -2875,6 +2876,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2454267483163297787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772941907478606549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 597f6db41c0d7b342aa3421076f7b9c1, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &791017008559114196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3737,6 +3753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3703320322144698833}
   - component: {fileID: 7944425241324844120}
+  - component: {fileID: 7103527684897001568}
   m_Layer: 0
   m_Name: Chicken_1
   m_TagString: Untagged
@@ -3821,6 +3838,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7103527684897001568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996468062807869084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 597f6db41c0d7b342aa3421076f7b9c1, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &1000293160265942574
 GameObject:
   m_ObjectHideFlags: 0
@@ -9704,7 +9736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7509004196638068516}
   - component: {fileID: -8369652881581102309}
-  - component: {fileID: -5635153714555695265}
+  - component: {fileID: 8815774953771699141}
   m_Layer: 0
   m_Name: (Normal)Chicken
   m_TagString: Untagged
@@ -9753,7 +9785,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1.8, z: 3}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &-5635153714555695265
+--- !u!114 &8815774953771699141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9762,10 +9794,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2931007485635623600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b7e927ad680b74f825ed707818bf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 597f6db41c0d7b342aa3421076f7b9c1, type: 2}
 --- !u!1 &2931008305730170563
 GameObject:
   m_ObjectHideFlags: 0
@@ -19770,6 +19801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172416522350363205}
   - component: {fileID: 1748698744402736337}
+  - component: {fileID: 6162313211343700612}
   m_Layer: 0
   m_Name: Chicken_5
   m_TagString: Untagged
@@ -19854,6 +19886,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6162313211343700612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793063299643668368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 597f6db41c0d7b342aa3421076f7b9c1, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &5858884792792060994
 GameObject:
   m_ObjectHideFlags: 0
@@ -20876,6 +20923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2693230647788055438}
   - component: {fileID: 4911986994907672206}
+  - component: {fileID: 3532898136006783486}
   m_Layer: 0
   m_Name: Chicken_2
   m_TagString: Untagged
@@ -20960,6 +21008,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3532898136006783486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126383514839214399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 597f6db41c0d7b342aa3421076f7b9c1, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &6143921405485420004
 GameObject:
   m_ObjectHideFlags: 0
@@ -23443,6 +23506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5305151267049303876}
   - component: {fileID: 4581116675024751995}
+  - component: {fileID: 4387782205666180103}
   m_Layer: 0
   m_Name: Chicken_3
   m_TagString: Untagged
@@ -23527,6 +23591,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4387782205666180103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902346038390962803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 597f6db41c0d7b342aa3421076f7b9c1, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &6909657713166321594
 GameObject:
   m_ObjectHideFlags: 0

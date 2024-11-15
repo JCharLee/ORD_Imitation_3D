@@ -15,10 +15,12 @@ public class Enemy : MonoBehaviour
     int pointIdx;
 
     // ÄÄÆ÷³ÍÆ®
+    Animator anim;
     NavMeshAgent agent;
 
     void Awake()
     {
+        anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
         }
 
         isDie = false;
+        anim.SetBool("IsDie", false);
         hp = maxHp;
     }
 
@@ -57,17 +60,24 @@ public class Enemy : MonoBehaviour
 
         if (!agent.isStopped)
         {
-            Quaternion rot = Quaternion.LookRotation(agent.desiredVelocity);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * 10f);
+            if (agent.desiredVelocity != Vector3.zero)
+            {
+                Quaternion rot = Quaternion.LookRotation(agent.desiredVelocity);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * 10f);
+            }
         }
 
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             MoveNextPoint();
+
+        if (hp <= 0)
+            Dead();
     }
 
-    public void Dead()
+    void Dead()
     {
         isDie = true;
         agent.isStopped = true;
+        anim.SetBool("IsDie", true);
     }
 }

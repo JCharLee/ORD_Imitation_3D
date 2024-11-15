@@ -15527,6 +15527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2587457169473383975}
   - component: {fileID: 8142030235848937976}
+  - component: {fileID: 238586858029919327}
   m_Layer: 0
   m_Name: Female_5
   m_TagString: Untagged
@@ -15611,6 +15612,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &238586858029919327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336876150015805013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e0ce46487324ca341997bf635eaff76e, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &4350169528723115716
 GameObject:
   m_ObjectHideFlags: 0
@@ -16717,6 +16733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864055857943203031}
   - component: {fileID: 1589706874434360248}
+  - component: {fileID: 2748605035596587607}
   m_Layer: 0
   m_Name: Female_3
   m_TagString: Untagged
@@ -16801,6 +16818,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2748605035596587607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817805395090200253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e0ce46487324ca341997bf635eaff76e, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &4871637005855070901
 GameObject:
   m_ObjectHideFlags: 0
@@ -18757,7 +18789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5613336845261596099}
   - component: {fileID: -2949499669387838488}
-  - component: {fileID: -8718305235014640236}
+  - component: {fileID: -522365179922794993}
   m_Layer: 0
   m_Name: (Normal)Female
   m_TagString: Untagged
@@ -18806,7 +18838,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1.8, z: 3}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &-8718305235014640236
+--- !u!114 &-522365179922794993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18815,10 +18847,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5224748481238716122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b7e927ad680b74f825ed707818bf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: e0ce46487324ca341997bf635eaff76e, type: 2}
 --- !u!1 &5228495230540382696
 GameObject:
   m_ObjectHideFlags: 0
@@ -20374,6 +20405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550842279479900826}
   - component: {fileID: 7033784048346857689}
+  - component: {fileID: 6247833053495056881}
   m_Layer: 0
   m_Name: Female_2
   m_TagString: Untagged
@@ -20458,6 +20490,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6247833053495056881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693035923827724166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e0ce46487324ca341997bf635eaff76e, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &5713408241319906050
 GameObject:
   m_ObjectHideFlags: 0
@@ -26160,6 +26207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4426749929628127240}
   - component: {fileID: 8093008311350262740}
+  - component: {fileID: 7021630691217293187}
   m_Layer: 0
   m_Name: Female_1
   m_TagString: Untagged
@@ -26244,6 +26292,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7021630691217293187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133501633212826475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e0ce46487324ca341997bf635eaff76e, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &7156515507953418952
 GameObject:
   m_ObjectHideFlags: 0
@@ -30706,6 +30769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4645177918931114512}
   - component: {fileID: 4701817852075075809}
+  - component: {fileID: 7370606096436240856}
   m_Layer: 0
   m_Name: Female_4
   m_TagString: Untagged
@@ -30790,6 +30854,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7370606096436240856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416873545361067571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e0ce46487324ca341997bf635eaff76e, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &8425102215440577756
 GameObject:
   m_ObjectHideFlags: 0

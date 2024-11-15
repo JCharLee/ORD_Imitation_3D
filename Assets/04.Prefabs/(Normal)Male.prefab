@@ -10230,6 +10230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9189813503936806423}
   - component: {fileID: 8970681655725920771}
+  - component: {fileID: 3370764968334243998}
   m_Layer: 0
   m_Name: Male_5
   m_TagString: Untagged
@@ -10314,6 +10315,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3370764968334243998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197513775917033069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8901f5d81d81638498dcbf54a3b9ab6f, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &3244774516079016853
 GameObject:
   m_ObjectHideFlags: 0
@@ -13194,6 +13210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 821900449260018449}
   - component: {fileID: 8660678471206235181}
+  - component: {fileID: 7527451192372759110}
   m_Layer: 0
   m_Name: Male_4
   m_TagString: Untagged
@@ -13278,6 +13295,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7527451192372759110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146680238667795127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8901f5d81d81638498dcbf54a3b9ab6f, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &4214691815555693440
 GameObject:
   m_ObjectHideFlags: 0
@@ -13604,6 +13636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410594913370904799}
   - component: {fileID: 7883989156336047195}
+  - component: {fileID: 7237674937548517522}
   m_Layer: 0
   m_Name: Male_2
   m_TagString: Untagged
@@ -13688,6 +13721,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7237674937548517522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258573744979959453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8901f5d81d81638498dcbf54a3b9ab6f, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &4269157166018124339
 GameObject:
   m_ObjectHideFlags: 0
@@ -21444,7 +21492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8759239123048278545}
   - component: {fileID: 1151792953016380084}
-  - component: {fileID: -3279386706538419876}
+  - component: {fileID: 182811298740741594}
   m_Layer: 0
   m_Name: (Normal)Male
   m_TagString: Untagged
@@ -21493,7 +21541,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1.8, z: 3}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &-3279386706538419876
+--- !u!114 &182811298740741594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21502,11 +21550,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6438281766510577465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b7e927ad680b74f825ed707818bf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 8901f5d81d81638498dcbf54a3b9ab6f, type: 2}
-  units: []
 --- !u!1 &6498414435910477287
 GameObject:
   m_ObjectHideFlags: 0
@@ -30431,6 +30477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7443298506570012274}
   - component: {fileID: 4155486308421299803}
+  - component: {fileID: 442250482638973541}
   m_Layer: 0
   m_Name: Male_3
   m_TagString: Untagged
@@ -30515,6 +30562,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &442250482638973541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475684486440759939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8901f5d81d81638498dcbf54a3b9ab6f, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &8518512732644502633
 GameObject:
   m_ObjectHideFlags: 0
@@ -31317,6 +31379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2564223090819918481}
   - component: {fileID: 3350314297020965417}
+  - component: {fileID: 7017851604520173777}
   m_Layer: 0
   m_Name: Male_1
   m_TagString: Untagged
@@ -31401,6 +31464,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7017851604520173777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956798391775880465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8901f5d81d81638498dcbf54a3b9ab6f, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &8972899124625322166
 GameObject:
   m_ObjectHideFlags: 0

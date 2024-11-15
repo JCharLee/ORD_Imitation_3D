@@ -9,27 +9,39 @@ public class Unit : MonoBehaviour
 
     float damage;
     float atkSpeed;
+    float atkTime;
+    float curAtkTime;
+    float rotSpeed = 10f;
     float atkRange;
 
     public Collider[] cols;
-    GameObject[] units;
     int enemyLayer;
     public GameObject target;
     float targetDist;
 
+    Animator anim;
+
     void Awake()
     {
-        damage = data.damage;
-        atkSpeed = data.atkSpeed;
-        atkRange = data.atkRange;
+        anim = GetComponent<Animator>();
+    }
 
+    void Start()
+    {
         enemyLayer = 1 << LayerMask.NameToLayer("Enemy");
+        Init();
+    }
 
-        units = new GameObject[5];
-        for (int i = 0; i < units.Length; i++)
-        {
-            units[i] = transform.GetChild(i).gameObject;
-        }
+    void Init()
+    {
+        damage = data.damage;
+
+        SetAtkSpeed(0f);
+        
+        if (data.unitType == UnitData.UnitType.Melee)
+            atkRange = 5f;
+        else
+            atkRange = 10f;
     }
 
     void Update()
@@ -40,59 +52,48 @@ public class Unit : MonoBehaviour
             target = cols[0].gameObject;
         else
             target = null;
-    }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, data.atkRange);
-    }
-
-    public void UnitActive()
-    {
-        for (int i = 0; i < units.Length; i++)
+        if (target != null)
         {
-            if (!units[i].activeSelf)
+            StartCoroutine("Attack");
+            Quaternion rot = Quaternion.LookRotation(target.transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * rotSpeed);
+        }
+        else
+        {
+            StopCoroutine("Attack");
+        }
+    }
+
+    public void SetAtkSpeed(float speed)
+    {
+        atkSpeed = data.atkSpeed + speed;
+        atkTime = 1f / atkSpeed;
+        curAtkTime = atkTime;
+
+        if (atkSpeed > 1)
+            anim.SetFloat("AttackSpeed", atkSpeed);
+        else
+            anim.SetFloat("AttackSpeed", 1f);
+    }
+
+    IEnumerator Attack()
+    {
+        while (true)
+        {
+            if (curAtkTime >= atkTime)
             {
-                units[i].SetActive(true);
-                break;
+                curAtkTime = 0f;
+                anim.SetTrigger("Attack");
             }
+
+            curAtkTime += Time.deltaTime;
+            yield return null;
         }
     }
 
-    public bool FullUnit()
+    void OnDisable()
     {
-        for (int i = 0; i < units.Length; i++)
-        {
-            if (!units[i].activeSelf)
-                return false;
-        }
-        return true;
-    }
-
-    void OnMouseDown()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            for (int i = units.Length - 1; i >= 0; i--)
-            {
-                if (units[i].activeSelf)
-                {
-                    if (i == 0)
-                    {
-                        gameObject.SetActive(false);
-                        break;
-                    }
-                    else
-                    {
-                        units[i].SetActive(false);
-                        break;
-                    }
-                }
-            }
-        }
+        StopCoroutine("Attack");
     }
 }

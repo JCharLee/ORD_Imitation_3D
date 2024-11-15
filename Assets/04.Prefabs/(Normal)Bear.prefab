@@ -3830,6 +3830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6231898145703633391}
   - component: {fileID: 1820516879166108212}
+  - component: {fileID: 4832906459045182651}
   m_Layer: 0
   m_Name: Bear_1
   m_TagString: Untagged
@@ -3914,6 +3915,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4832906459045182651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106966510322592667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7c346d1f7f8002d4a9816517f7712da3, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &1117483609779348713
 GameObject:
   m_ObjectHideFlags: 0
@@ -11128,7 +11144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290788066846314536}
   - component: {fileID: 4669312005587221907}
-  - component: {fileID: 6447864103980471249}
+  - component: {fileID: -3366554461013348927}
   m_Layer: 0
   m_Name: (Normal)Bear
   m_TagString: Untagged
@@ -11177,7 +11193,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1.8, z: 3}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6447864103980471249
+--- !u!114 &-3366554461013348927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11186,10 +11202,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2966885630404822922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b7e927ad680b74f825ed707818bf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 7c346d1f7f8002d4a9816517f7712da3, type: 2}
 --- !u!1 &2974860375052587791
 GameObject:
   m_ObjectHideFlags: 0
@@ -11360,6 +11375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7214136278204994562}
   - component: {fileID: 372824868100360809}
+  - component: {fileID: 2810997239815708159}
   m_Layer: 0
   m_Name: Bear_2
   m_TagString: Untagged
@@ -11444,6 +11460,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2810997239815708159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068080659396707860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7c346d1f7f8002d4a9816517f7712da3, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &3088104442961410426
 GameObject:
   m_ObjectHideFlags: 0
@@ -13959,6 +13990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3637323095127433412}
   - component: {fileID: 4878109692957199582}
+  - component: {fileID: 7842642882501803046}
   m_Layer: 0
   m_Name: Bear_4
   m_TagString: Untagged
@@ -14043,6 +14075,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7842642882501803046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626353958857410970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7c346d1f7f8002d4a9816517f7712da3, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &3653961309057903996
 GameObject:
   m_ObjectHideFlags: 0
@@ -18409,6 +18456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1241476687921311802}
   - component: {fileID: 7557213751631422431}
+  - component: {fileID: 7744652808892092546}
   m_Layer: 0
   m_Name: Bear_3
   m_TagString: Untagged
@@ -18493,6 +18541,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7744652808892092546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913164591200540307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7c346d1f7f8002d4a9816517f7712da3, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &4922915652655241491
 GameObject:
   m_ObjectHideFlags: 0
@@ -26279,6 +26342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4360235816676673383}
   - component: {fileID: 182579294012955761}
+  - component: {fileID: 8666002604550223486}
   m_Layer: 0
   m_Name: Bear_5
   m_TagString: Untagged
@@ -26363,6 +26427,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8666002604550223486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302958009891797319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c984b37fa1013b4f82fb9cfefb7f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7c346d1f7f8002d4a9816517f7712da3, type: 2}
+  cols: []
+  target: {fileID: 0}
 --- !u!1 &7338566021285564099
 GameObject:
   m_ObjectHideFlags: 0
